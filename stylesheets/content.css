@@ -1,0 +1,110 @@
+*{ box-sizing: border-box;}
+body{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vw;
+    cursor: url("../img/icons8-mouse-32.png") , auto;
+}
+
+@font-face {
+font-family: "CarlaSansLight";
+src: url("../fonts/CarlaSansLight.ttf") format("truetype");
+font-style: Light;
+font-weight: Light;
+}
+
+p{ font-family: 'CarlaSansLight'; }
+
+.first_one{
+    height: 20vw;
+    width: 35%;
+    overflow: hidden;
+    position: relative;
+    background: lemonchiffon;
+    cursor: url("../img/icons8-mouse-64.png") , auto;
+}
+
+.circle{
+    width: 6vw;
+    height: 6vw;
+    border-radius: 50%;
+    background: blue;
+    border: 3px dashed aliceblue;
+    color: aliceblue;
+    font-size: 5vw;
+    text-align: center;
+    position: absolute;
+    animation: ball 5s linear infinite;
+}
+
+@keyframes ball {
+    0%{ top: 0% ; left: -10% ;  text-align: end;  }
+    30%{ top: 70% ; left: 30% ; rotate: -30deg; }
+    50%{ top: 0% ; left: 50% ; scale: 0.5; text-align: center; }
+    70%{ top: 70% ; left: 70% ;  rotate: 30deg; }
+    90%{ top: 0% ; left: 90% ; text-align: start; }
+    100%{ top: 70% ; left: 110% ; }
+}
+
+.second_one{
+    height: 20vw;
+    width: 35%;
+    overflow: hidden;
+    position: relative;
+    background: rgb(251, 218, 223)
+}
+
+.rotating{
+    height: 15vw;
+    width: 15vw;
+    border-radius: 50%;
+    transform-origin: left center;
+    position: absolute;
+    animation: spin 3s linear infinite;
+    border: 1px solid blue;
+    margin-left: 30%;
+    margin-top: 8%;
+    transform-style: preserve-3d;
+}
+
+.del3{ animation-delay: 0.5s; }
+.del6{ animation-delay: 1s; }
+
+@keyframes spin {
+    0%{ transform: rotateX(0deg);}
+    100%{ transform: rotateX(360deg);}
+}
+
+
+.third_one{
+    height: 20vw;
+    width: 30%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
+    background: lightcyan;
+    display: flex;
+    padding: 0.5%;
+    scrollbar-color: rgb(255, 255, 255) blue;
+}
+
+.box{
+    width: 12vw;
+    height: 30vw;
+    background: lavender;
+    position: relative;
+    margin: 1%;
+    border: 1px dashed lightcoral;
+}
+
+.box:hover{  background: lemonchiffon;}
+
+.default{ cursor: default;}
+.wait{ cursor: wait;}
+.pointer{ cursor: pointer;}
+.text{ cursor: text;}
+.move{ cursor: move;}
+.help{ cursor: help;}
+.grab{ cursor: grab; }
+.nonecursore{ cursor: none;}

@@ -1,1 +1,1 @@
-# animation_cursor_scrollbar_adaptive
+# Clean
